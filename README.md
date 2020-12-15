@@ -1,28 +1,34 @@
 # JUDY TQS PROJECT
 
-This 
-
 ## How to install
 ``make install``
 
 ## How to compile and test
-This process also includes preprocessing Judy 3.0's output.
 
-Project Cli-32f
-``make Cli``
+Open your terminal a type:
 
-Project Gson-15f
-``make Gson``
+* ```make Cli```  to test project Cli (version 32f)
+* ```make Gson``` to test project Gson (version 15f)
+* ```make Lang``` to test project Lang (version 53f)
 
-Project Lang-53f
-``make Lang``
+This make step does the following:
 
-## How we used this workflow
-5 Steps:
+1. Compilation using Defects4J;
+2. Mutation Testing using Judy 3.0;
+3. Processing of Judy's results with Python
 
-1. Created three _StudentTest_ test classes to the following classes:
-add table from report
-2. Ran 
-3. 
-4. 
-5. 
+## Where can I find the results?
+
+After running one of the make steps above, you will find the results in the following folders:
+
+* Cli-32f/results/
+* Gson-15f/results/
+* Lang-53f/results/
+
+Judy's raw output is found in .json files. Our data processing produces a clean table in .csv format
+
+## Where can I find the logs?
+
+* Cli-32f/logs/
+* Gson-15f/logs/
+* Lang-53f/logs/
