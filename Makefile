@@ -2,12 +2,12 @@
 install:
 	sudo apt update -y
 	sudo apt install -y openjdk-8-jdk git build-essential subversion perl curl unzip cpanminus make python3 python-is-python3
-	#git clone https://github.com/rjust/defects4j.git lib/defects4j
+	#DATA ALREADY CACHED, SKIPPING OVER STEP: git clone https://github.com/rjust/defects4j.git lib/defects4j 
 	sudo cpanm --installdeps ./lib/defects4j
 	lib/defects4j/init.sh
-	#lib/defects4j/framework/bin/defects4j checkout -p Cli -v32f -w Cli-32f
-	#lib/defects4j/framework/bin/defects4j checkout -p Gson -v15f -w Gson-15f
-	#lib/defects4j/framework/bin/defects4j checkout -p Lang -v53f -w Lang-53f
+	#DATA ALREADY CACHED, SKIPPING OVER STEP: #lib/defects4j/framework/bin/defects4j checkout -p Cli -v32f -w Cli-32f
+	#DATA ALREADY CACHED, SKIPPING OVER STEP: #lib/defects4j/framework/bin/defects4j checkout -p Gson -v15f -w Gson-15f
+	#DATA ALREADY CACHED, SKIPPING OVER STEP: #lib/defects4j/framework/bin/defects4j checkout -p Lang -v53f -w Lang-53f
 .PHONY: install
 	
 
