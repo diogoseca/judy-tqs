@@ -12,8 +12,8 @@ descriptions = {operator['name']: operator['description']
 
 csv_filename = results_filename.replace('.json', '.mutants.csv')
 csv_writer = csv.writer(open(csv_filename , 'w'), quoting=csv.QUOTE_ALL)
-lines = [['Line','Operator','Description','Point']]
 
+lines = []
 for c in results['classes']:
 	if c['name'] == classname:
 		for mutant in c['notKilledMutant']:
@@ -22,15 +22,14 @@ for c in results['classes']:
 			description = descriptions[operator]
 			point = mutant['points'][0]
 			# if line > 0:
-			lines.append(line)
+			lines.append([line, operator, description, point])
 		break
 
 print('{} mutants found!'.format(len(lines)))
 
-if len(lines) == 1:
-	csv_writer.writerow([print('No mutants found!')]
-else:
+if len(lines) > 1:
 	lines.sort(key=lambda line: line[0])
+	csv_writer.writerow(['Line','Operator','Description','Point'])
 	for line in lines:
 		csv_writer.writerow(line)
 
