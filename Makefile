@@ -36,6 +36,6 @@ Lang:
 	# clean, compile, run judy, and preprocess results
 	rm -rf Lang-53f/target/
 	lib/defects4j/framework/bin/defects4j compile -w Lang-53f
-	java -jar lib/judy-all-3.0.0-M1-all.jar -p Lang-53f/target/classes/ -t Lang-53f/target/test-classes/ --result-path "Lang-53f/${RESULT_FILE}" > "Lang-53f/${LOG_FILE}"
+	java -jar lib/judy-all-3.0.0-M1-all.jar -p Lang-53f/target/java/ -t Lang-53f/target/test/ --result-path "Lang-53f/${RESULT_FILE}" > "Lang-53f/${LOG_FILE}"
 	python lib/filtermutants.py "Lang-53f/$(PROCESSED_FILE)" org.apache.commons.lang.time.DateUtils
 
