@@ -17,6 +17,9 @@ Which focus on improving mutation test coverage of the classes:
 * Lang-53f/src/java/org/apache/commons/lang/time/DateUtils.java
 
 ## How to install
+
+After cloning this repository, open your terminal and type the following on the project root:
+
 ``make install``
 
 ## How to compile and test
