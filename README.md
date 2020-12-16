@@ -24,7 +24,7 @@ After cloning this repository, open your terminal and type the following on the 
 
 ## How to compile and test
 
-Open your terminal a type:
+Open your terminal and type:
 
 * ```make Cli```  to test project Cli (org.apache.commons.cli, version 32f)
 * ```make Gson``` to test project Gson (com.google.gson, version 15f)
