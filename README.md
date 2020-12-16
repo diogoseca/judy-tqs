@@ -46,7 +46,7 @@ After running one of the make steps above, you will find the results in the foll
 
 Judy's raw output is found in .json files. Our data processing produces a clean table in .csv format
 
-## Where can I find the logs?
+## Where can I find the logs for Judy?
 
 * Cli-32f/logs/
 * Gson-15f/logs/
