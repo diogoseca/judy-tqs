@@ -29,7 +29,7 @@ Gson:
 	# clean, compile, run judy, and preprocess results
 	rm -rf Gson-15f/target/
 	lib/defects4j/framework/bin/defects4j compile -w Gson-15f
-	java -jar lib/judy-all-3.0.0-M1-all.jar -p Gson-15f/target/classes/ -t Gson-15f/target/test-classes/ --result-path "Gson-15f/${RESULT_FILE}" > "Gson-15f/${LOG_FILE}"
+	java -jar lib/judy-all-3.0.0-M1-all.jar -p Gson-15f/target/classes/com/google/gson/stream/ -t Gson-15f/target/test-classes/com/google/gson/stream/ --result-path "Gson-15f/${RESULT_FILE}" > "Gson-15f/${LOG_FILE}"
 	python lib/filtermutants.py "Gson-15f/$(PROCESSED_FILE)" com.google.gson.stream.JsonWriter
 
 Lang:
