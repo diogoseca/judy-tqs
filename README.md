@@ -1,5 +1,5 @@
 # JUDY++ PROJECT
-This project is an experiment with ![Judy 3.0](http://mutationtesting.org/) on three java projects: Cli (org.apache.commons.cli), Gson (com.google.gson) and Lang (org.apache.commons.lang).
+This project is an experiment with [Judy 3.0](http://mutationtesting.org/) on three java projects: Cli (org.apache.commons.cli), Gson (com.google.gson) and Lang (org.apache.commons.lang).
 
 
 Our goal is to apply mutation testing to the suite of tests of these projects, and to develop additional test classes that help improve mutation test coverage.
