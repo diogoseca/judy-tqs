@@ -8,15 +8,15 @@ In particular, we implement the following test classes:
 
 (to fix paths)
 * Cli-32f/src/test/java/org/apache/commons/cli/StudentTest.java
-* Gson-15f/src/test/java/com/google/gson/stream/StudentTest.java
+* Gson-15f/gson/src/test/java/com/google/gson/stream/StudentTest.java
 * Lang-53f/src/test/org/apache/commons/lang/time/StudentTest.java
 
 Which focus on improving mutation test coverage of the classes:
 
 (to fix paths)
-* Cli-32f/src/test/java/org/apache/commons/cli/StudentTest.java
-* Gson-15f/src/test-classes/java/com/google/gson/stream/StudentTest.java
-* Lang-53f/src/test/org/apache/commons/lang/time/StudentTest.java
+* Cli-32f/src/main/java/org/apache/commons/cli/HelpFormatter.java
+* Gson-15f/gson/src/main/java/com/google/gson/stream/JsonWriter.java
+* Lang-53f/src/java/org/apache/commons/lang/time/DateUtils.java
 
 ## How to install
 ``make install``
