@@ -19,11 +19,15 @@ RESULT_FILE=results/${DATE}.json
 PROCESSED_FILE=results/${DATE}.json
 
 Cli:
-	# clean, compile, run judy, and preprocess results
+	# clean, compile, test, run judy, and preprocess results
 	rm -rf Cli-32f/target/
 	lib/defects4j/framework/bin/defects4j compile -w Cli-32f
+	#lib/defects4j/framework/bin/defects4j test -w Cli-32f
+	#echo "mutation_datetime, class_method, input_text, input_width, input_startPos, return_original, return_mutation, test_kills_mutation" > testFindWrapPos.csv
+	#echo "mutation_datetime, class_method, input_s, return_original, return_mutation, test_kills_mutation" > testRtrim.csv
+	#echo "mutation_datetime, class_method, input_sb, input_width, input_nextLineTabStop, input_text, return_original, return_mutation, test_kills_mutation" > testRenderWrappedText.csv
 	java -jar lib/judy-all-3.0.0-M1-all.jar -p Cli-32f/target/classes/ -t Cli-32f/target/test-classes/ --result-path "Cli-32f/${RESULT_FILE}" > "Cli-32f/${LOG_FILE}"
-	python lib/filtermutants.py "Cli-32f/$(PROCESSED_FILE)" org.apache.commons.cli.HelpFormatter
+	python lib/filtermutants.py "Cli-32f/$(PROCESSED_FILE)" org.apache.commons.cli.HelpFormatter	
 
 Gson:
 	# clean, compile, run judy, and preprocess results
@@ -36,6 +40,6 @@ Lang:
 	# clean, compile, run judy, and preprocess results
 	rm -rf Lang-53f/target/
 	lib/defects4j/framework/bin/defects4j compile -w Lang-53f
-	java -jar lib/judy-all-3.0.0-M1-all.jar -p Lang-53f/target/classes/org/apache/commons/lang/time/ -t Lang-53f/target/tests/org/apache/commons/lang/time/ --result-path "Lang-53f/${RESULT_FILE}" > "Lang-53f/${LOG_FILE}"
+	java -jar lib/judy-all-3.0.0-M1-all.jar -p Lang-53f/target/classes/org/apache/commons/lang/time/ -t Lang-53f/target/tests/ --result-path "Lang-53f/${RESULT_FILE}" > "Lang-53f/${LOG_FILE}"
 	python lib/filtermutants.py "Lang-53f/$(PROCESSED_FILE)" org.apache.commons.lang.time.DateUtils
 
